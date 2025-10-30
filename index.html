@@ -2,66 +2,27 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Galerie Interactive – version hébergée</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #f4f4f4;
-    }
-    #image {
-      width: 400px;
-      height: 300px;
-      margin: 20px auto;
-      border: 2px solid #333;
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-weight: bold;
-      font-size: 18px;
-    }
-    .gallery img {
-      width: 100px;
-      height: 70px;
-      margin: 10px;
-      cursor: pointer;
-      border: 2px solid #333;
-      transition: transform 0.2s;
-    }
-    .gallery img:hover {
-      transform: scale(1.1);
-      border-color: #ff6600;
-    }
-  </style>
+  <title>Galerie Interactive</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h2>Galerie Interactive (images en ligne)</h2>
+<h2>Galerie Interactive</h2>
+<div id="description">Survolez une image ci-dessous pour l’afficher en grand</div>
 
 <div id="image">Hover over an image below to display here</div>
 
 <div class="gallery">
-  <img src="https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg" alt="Nature 1" onmouseover="upDate(this)" onmouseout="unDo()">
-  <img src="https://images.pexels.com/photos/34950/pexels-photo.jpg" alt="Nature 3" onmouseover="upDate(this)" onmouseout="unDo()">
-  <img src="https://images.pexels.com/photos/355423/pexels-photo-355423.jpeg" alt="Nature 4" onmouseover="upDate(this)" onmouseout="unDo()">
+  <img src="https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?auto=compress&cs=tinysrgb&h=350" alt="Nature 1" onmouseover="upDate(this)" onmouseout="unDo()">
+  <img src="https://images.pexels.com/photos/1562/nature-forest-trees-fog.jpeg?auto=compress&cs=tinysrgb&h=350" alt="Nature 2" onmouseover="upDate(this)" onmouseout="unDo()">
+  <img src="https://images.pexels.com/photos/34950/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350" alt="Nature 3" onmouseover="upDate(this)" onmouseout="unDo()">
+  <img src="https://images.pexels.com/photos/355423/pexels-photo-355423.jpeg?auto=compress&cs=tinysrgb&h=350" alt="Nature 4" onmouseover="upDate(this)" onmouseout="unDo()">
+  <img src="https://images.pexels.com/photos/36717/amazing-nature-waterfall-36717.jpeg?auto=compress&cs=tinysrgb&h=350" alt="Nature 5" onmouseover="upDate(this)" onmouseout="unDo()">
+  <img src="https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg?auto=compress&cs=tinysrgb&h=350" alt="Nature 6" onmouseover="upDate(this)" onmouseout="unDo()">
+  <img src="https://images.pexels.com/photos/208745/pexels-photo-208745.jpeg?auto=compress&cs=tinysrgb&h=350" alt="Nature 7" onmouseover="upDate(this)" onmouseout="unDo()">
+  <img src="https://images.pexels.com/photos/158607/cairn-fog-mystical-background-158607.jpeg?auto=compress&cs=tinysrgb&h=350" alt="Nature 8" onmouseover="upDate(this)" onmouseout="unDo()">
 </div>
 
-<script>
-  function upDate(previewPic) {
-    console.log("upDate called");
-    console.log(previewPic.src, previewPic.alt);
-    document.getElementById('image').innerHTML = previewPic.alt;
-    document.getElementById('image').style.backgroundImage = "url('" + previewPic.src + "')";
-  }
-
-  function unDo() {
-    document.getElementById('image').innerHTML = "Hover over an image below to display here";
-    document.getElementById('image').style.backgroundImage = "url('')";
-  }
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>

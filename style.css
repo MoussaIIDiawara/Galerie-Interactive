@@ -4,6 +4,16 @@ body {
   background-color: #f4f4f4;
 }
 
+h2 {
+  margin-top: 20px;
+}
+
+#description {
+  margin-bottom: 20px;
+  font-style: italic;
+  color: #333;
+}
+
 #image {
   width: 400px;
   height: 300px;
